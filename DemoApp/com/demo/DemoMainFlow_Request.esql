@@ -7,7 +7,7 @@ CREATE COMPUTE MODULE DemoMainFlow_Request
 		
 		SET OutputRoot.BLOB.BLOB = InputRoot.BLOB.BLOB;
 		
---		SET OutputLocalEnvironment.MQ.GET.MQGMO.Options = MQGMO_CONVERT;
+		SET OutputLocalEnvironment.MQ.GET.MQGMO.Options = MQGMO_CONVERT;
 		
 		RETURN TRUE;
 	END;
