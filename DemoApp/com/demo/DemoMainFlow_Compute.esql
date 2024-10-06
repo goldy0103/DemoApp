@@ -1,0 +1,14 @@
+BROKER SCHEMA com.demo
+
+
+CREATE COMPUTE MODULE DemoMainFlow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot = InputRoot;
+--		SET OutputRoot.MQMD.MsgId = InputRoot.MQMD.MsgId;
+		SET OutputRoot.MQMD.CorrelId = InputLocalEnvironment.WrittenDestination.MQ.DestinationData.msgId;
+		
+--		SET OutputLocalEnvironment.MQ.GET.MQGMO
+		RETURN TRUE;
+	END;
+END MODULE;
