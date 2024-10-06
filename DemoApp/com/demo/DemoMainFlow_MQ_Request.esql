@@ -1,0 +1,11 @@
+BROKER SCHEMA com.demo
+
+
+CREATE COMPUTE MODULE DemoMainFlow_MQ_Request
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+END MODULE;
