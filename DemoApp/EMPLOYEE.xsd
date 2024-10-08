@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="EMPLOYEE_ID" type="EMPLOYEE_IDType"/>
+  <xsd:element name="EMPLOYEE" type="EMPLOYEEType"/>
+  <xsd:element name="DEPARTMENT" type="DEPARTMENTType"/>
+  <xsd:element name="LAST_NAME" type="LAST_NAMEType"/>
+  <xsd:element name="EMAIL" type="EMAILType"/>
+  <xsd:element name="PHONE_NUMBER" type="PHONE_NUMBERType"/>
+  <xsd:element name="FIRST_NAME" type="FIRST_NAMEType"/>
+  <xsd:element name="NAME" type="NAMEType"/>
+  <xsd:simpleType name="EMPLOYEE_IDType">
+  	<xsd:restriction base="xsd:string">
+  		<xsd:minLength value="1"></xsd:minLength>
+  		<xsd:maxLength value="8"></xsd:maxLength>
+  	</xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="EMPLOYEEType">
+    <xsd:sequence>
+      <xsd:element ref="EMPLOYEE_ID"/>
+      <xsd:element ref="NAME" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="EMAIL" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="PHONE_NUMBER" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="DEPARTMENT" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="DEPARTMENTType">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="LAST_NAMEType">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="EMAILType">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="PHONE_NUMBERType">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="FIRST_NAMEType">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="NAMEType">
+    <xsd:sequence>
+      <xsd:element ref="FIRST_NAME"/>
+      <xsd:element ref="LAST_NAME"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

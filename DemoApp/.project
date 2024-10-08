@@ -3,6 +3,7 @@
 	<name>DemoApp</name>
 	<comment></comment>
 	<projects>
+		<project>Demo_CommonParseException_StLib</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
