@@ -1,3 +1,7 @@
 [submodule "DemoLib"]
 	path = DemoLib
 	url = https://github.com/goldy0103/DemoLib.git
+[submodule "Demo_CommonParseException_StLib"]
+	path = Demo_CommonParseException_StLib
+	url = https://github.com/goldy0103/Demo_CommonParseException_StLib.git
+	branch = master
